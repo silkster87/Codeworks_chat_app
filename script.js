@@ -1,9 +1,11 @@
 var msgID = 1;
 
+document.getElementById("dateTime").innerHTML = getDateTime();
 
-(function intialDateTime(){
-    document.getElementById("dateTime").innerHTML = getDateTime();
-})(); //Immediate invoked to get the date time right now
+document.getElementById("userInput").addEventListener("keyup", (event)=>{
+        if(event.key === "Enter")
+        sendMessage();
+});
 
 function sendMessage(){
     const userMsg = $('#userInput').val(); //Get user message
@@ -17,7 +19,7 @@ function sendMessage(){
     var previousMsgID = msgID - 1;
     var computerMsgID =  "#" + previousMsgID.toString();
     $(messageContent).insertAfter($(computerMsgID));
-    
+    scrollToBottom();
     setTimeout(generateRandomMsg, 3000);
 }
 
@@ -41,5 +43,11 @@ function generateRandomMsg(){
     var previousMsgID = msgID -1;
     var userMsgID = "#" + previousMsgID.toString();
     $(messageContent).insertAfter($(userMsgID));
-    
+    scrollToBottom();
+}
+
+//https://stackoverflow.com/questions/270612/scroll-to-bottom-of-div 
+function scrollToBottom(){
+    var container = document.getElementById("overFlowContainer");
+    container.scrollTop = container.scrollHeight;
 }
