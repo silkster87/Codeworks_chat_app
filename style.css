@@ -42,9 +42,23 @@ body{
     font-size: small;
 }
 
-form {
-    margin-top: 1em;
+#messageBar{
+    margin: 0 auto;
+    height: fit-content;
+    width: 30%;
 }
+
+#userInput{
+    margin-top: 1em;
+    width: 70%;
+    height: 2em;
+}
+
+#btnClick{
+    width: 20%;
+}
+
+
 
 button {
     background-color: cornflowerblue;
