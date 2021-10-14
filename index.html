@@ -4,6 +4,7 @@
     <head>
         <meta charset="utf-8">
         <link rel="stylesheet" href="style.css">
+        <!--jquery link from https://code.jquery.com/ -->
         <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
         <title>Codeworks Chat app</title>
     </head>
@@ -12,14 +13,16 @@
         <script src="script.js"></script>
 
     <h1>Codeworks Chat app</h1>
+    
+    <div id="overFlowContainer">
+        <div id ="1" class="computer">
+            <p>Hello - how are you today?</p>
+            <p id="dateTime">12/10/21 17:09</p>
+        </div>
 
-    <div class="computer">
-        <p>Hello - how are you today?</p>
-        <p id="dateTime">12/10/21 17:09</p>
+        
     </div>
 
-    <h2></h2>
-    
     <form>
         <input type="text" id="userInput">
         <button type="button" onclick="sendMessage()">Send</button>
