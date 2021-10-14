@@ -7,7 +7,7 @@
 }
 
 .user {
-    background-color: #36a5d9;
+    background-color: #b6dcee;
     text-align: right;
     margin-left: auto;
     margin-right: 0;
@@ -30,7 +30,7 @@ body{
 }
 
 #overFlowContainer{
-    width: 50%;
+    width: 30%;
     height: 400px;
     padding: auto;
     overflow: scroll;
